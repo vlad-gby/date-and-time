@@ -16,17 +16,20 @@
 
   <div class="output">
     <h5>Current date and time is:</h5>
-    <h3>Result</h3>
+    <h3>Date</h3>
+    <h3>Time</h3>
   </div>
 </div>
 
 <script>
   const date = Date();
-  // const date = 'Fri Jan 31 2024';
+  // THIS IS FOR TESTING:
+  // const date = 'Fri Jan 31 2024';  
   let dayOfWeek = '';
   let day = '';
   let month = '';
   let year = '';
+  let time = '';
 
   function check(){
     switch (date.slice(0,3)){
@@ -103,11 +106,17 @@
 
     year = date.slice(11,15)
 
+    time = date.slice(16, 24)
+
     document.querySelector('.output h3').innerHTML = `Today is ${dayOfWeek},\n ${day} of ${month}, ${year}`
+    document.querySelector('.output h3:nth-child(3)').innerHTML = `Time is ${time}`
+
+    console.log(time)
   }
   
 
-  console.log(date)
+  
+  
 </script>
   
 </body>
