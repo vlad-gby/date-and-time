@@ -3,7 +3,7 @@
 }
 
 body{
-  background-color: grey;
+  background-color: rgb(122, 122, 122);
   height: 80vh;
   display: flex;
   align-items: center;
